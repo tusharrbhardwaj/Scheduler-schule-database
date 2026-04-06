@@ -30,7 +30,7 @@ CREATE TABLE timeslots (
 
   -- check if the inputed day is valid or not
 
-  day TEXT CHECK (day IN ('Monday','Tuesday','Wednesday','Thursday','Friday'))
+  CHECK (day IN ('Monday','Tuesday','Wednesday','Thursday','Friday'))
 );
 
 
