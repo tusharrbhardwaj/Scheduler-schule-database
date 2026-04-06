@@ -10,20 +10,27 @@ CREATE TABLE student_groups (
 CREATE TABLE classrooms (
   room_id BIGSERIAL PRIMARY KEY,
   cr_capacity BIGINT NOT NULL,
-  cr_number VARCHAR(20) UNIQUE
+  cr_number VARCHAR(20) UNIQUE,
+
+  -- Check if room capacity is always greate than 0 or not
+
+  CHECK (cr_capacity > 0)
 );
 
 
 -- Table "timeslots" to store all timeslots with their ids, start and end_time for reliable assignment of timeslots to rooms and classes.
 CREATE TABLE timeslots (
   timeslot_id BIGSERIAL PRIMARY KEY,
-  day VARCHAR(100) NOT NULL,
+  day VARCHAR(10) NOT NULL,
   start_time TIME NOT NULL,
   end_time TIME NOT NULL,
 
-  -- check time input to validate incoming start and end time of each slots
+  -- check time input to validate incoming start and end time of each slots 
+  CHECK (start_time < end_time),
 
-  CHECK (start_time < end_time)
+  -- check if the inputed day is valid or not
+
+  day TEXT CHECK (day IN ('Monday','Tuesday','Wednesday','Thursday','Friday'))
 );
 
 
