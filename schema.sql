@@ -83,12 +83,12 @@ CREATE TABLE class_groups (
 
 CREATE TABLE students (
   student_id BIGSERIAL NOT NULL UNIQUE,
-  GH_id VARCHAR(10) PRIMARY,
+  GH_id VARCHAR(10) PRIMARY KEY,
   group_id BIGINT NOT NULL,
 
   -- assigning group_id as foreign key that would link it to student_groups
   FOREIGN KEY (group_id)
-  REFERENCES student_groups(student_groups)
+  REFERENCES student_groups(group_id)
   ON DELETE CASCADE
 );
 
