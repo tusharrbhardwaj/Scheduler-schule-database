@@ -25,7 +25,7 @@ This project requires a relational databse, which serves as its source of input 
 
 ## Schema and ER-Diagram
 
-![alt text](https://github.com/tusharrbhardwaj/Scheduler-schule-database/blob/main/schema.jpg)
+![alt text](https://github.com/tusharrbhardwaj/Scheduler-schule-database/blob/main/ER-Diagram.jpg)
 
 ## Database Composition 
 
