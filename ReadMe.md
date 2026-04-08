@@ -23,6 +23,10 @@ https://github.com/tusharrbhardwaj/Scheduler-schule
 
 This project requires a relational databse, which serves as its source of input data and later finalized schedules are also updated into this databse.
 
+## Schema and ER-Diagram
+
+![alt text](https://github.com/tusharrbhardwaj/Scheduler-schule-database/blob/main/schema.jpg)
+
 ## Database Composition 
 
 Scheduler-schule-databse is based on postgres, files ./schema.sql and ./DemoDataEntry.sql supports its structure and basic demo data to perofrom operation on.
