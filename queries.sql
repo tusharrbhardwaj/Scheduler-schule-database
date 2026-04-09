@@ -57,18 +57,6 @@ FROM classes
 GROUP BY prof_id;
 
 
--- Joining of multiple tables 
-SELECT 
-    c.class_id,
-    p.prof_name,
-    t.day,
-    t.start_time,
-    t.end_time
-FROM schedule s
-JOIN classes c ON s.class_id = c.class_id
-JOIN professor p ON c.prof_id = p.prof_id
-JOIN timeslots t ON s.timeslot_id = t.timeslot_id;
-
 
 -- Updating a table 
 UPDATE classes
